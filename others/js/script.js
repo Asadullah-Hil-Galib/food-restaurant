@@ -1,3 +1,9 @@
+let preloader = document.querySelector( '#loader' );
+setTimeout(function loaderThisPage ()
+{
+    preloader.style.display = 'none'
+},4000)
+
 
 /* ==================NavBar Scroll Effect Script=====================*/
 let nav = document.querySelector( '.navigation-wrap' )
@@ -12,6 +18,8 @@ window.onscroll = function ()
     }
 }
 
+
+
 /* ==================NavBar Hide Script====================*/
 let NavBar = document.querySelectorAll ( '.nav-link' );
 let navCollapse = document.querySelector( '.collapse.navbar-collapse' );
@@ -22,6 +30,8 @@ NavBar.forEach(function (a) {
         navCollapse.classList.remove('show')
     })
 });
+
+
 
 /* ==================Counter Section Script====================*/
 document.addEventListener( 'DOMContentLoaded', () =>
@@ -39,12 +49,12 @@ document.addEventListener( 'DOMContentLoaded', () =>
                 obj.textContent = current;
                 if ( current == end )
                 {
-                    clearInterval(timer)
+                    clearInterval( timer )
                 }
-        }, step)
+            }, step )
     }
     counter( 'counter1', 0, 1287, 3000 );
     counter( 'counter2', 100, 5786, 2500 );
     counter( 'counter3', 0, 1400, 3000 );
     counter( 'counter4', 0, 7110, 3000 );
-})
+} );
